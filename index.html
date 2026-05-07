@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FORGE — AI Business Toolkit</title>
+  <title>FORGE â AI Business Toolkit</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <style>
@@ -31,20 +31,20 @@
     @keyframes fadeUp  { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
     @keyframes shimmer { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
 
-    /* ── Layout ── */
+    /* ââ Layout ââ */
     .app    { display: flex; flex-direction: column; min-height: 100vh; }
     .header { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; justify-content: space-between;
               padding: 14px 28px; border-bottom: 1px solid var(--border); background: rgba(24,24,48,.95); backdrop-filter: blur(12px); }
     .body   { display: flex; flex: 1; overflow: hidden; }
     .footer { border-top: 1px solid var(--border); padding: 10px 28px; display: flex; justify-content: space-between; align-items: center; }
 
-    /* ── Header ── */
+    /* ââ Header ââ */
     .logo       { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; letter-spacing: .14em; color: var(--gold); }
     .logo-sub   { font-size: 10px; color: var(--muted); letter-spacing: .2em; text-transform: uppercase; margin-left: 10px; }
     .status-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); box-shadow: 0 0 6px var(--green); }
     .status-txt { font-size: 10px; color: var(--muted); letter-spacing: .1em; margin-left: 6px; }
 
-    /* ── API Key bar ── */
+    /* ââ API Key bar ââ */
     .key-bar { padding: 10px 28px; background: rgba(200,169,110,.05); border-bottom: 1px solid var(--border);
                display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
     .key-label { font-size: 10px; color: var(--gold); letter-spacing: .14em; text-transform: uppercase; white-space: nowrap; }
@@ -60,7 +60,7 @@
     .key-status.ok  { background: rgba(74,222,128,.1); color: var(--green); border: 1px solid rgba(74,222,128,.25); }
     .key-status.err { background: rgba(248,113,113,.1); color: var(--red); border: 1px solid rgba(248,113,113,.25); }
 
-    /* ── Sidebar ── */
+    /* ââ Sidebar ââ */
     .sidebar { width: 210px; flex-shrink: 0; border-right: 1px solid var(--border); padding: 20px 12px;
                display: flex; flex-direction: column; gap: 4px; overflow-y: auto; }
     .sidebar-label { font-size: 9px; color: var(--muted); letter-spacing: .2em; text-transform: uppercase; padding: 0 10px; margin-bottom: 8px; }
@@ -75,7 +75,7 @@
     .sidebar-note { padding: 10px 12px; font-size: 10px; color: var(--muted); line-height: 1.7; }
     .sidebar-note strong { color: var(--gold); font-size: 9px; letter-spacing: .14em; text-transform: uppercase; display: block; margin-bottom: 4px; }
 
-    /* ── Main ── */
+    /* ââ Main ââ */
     .main { flex: 1; display: flex; flex-direction: column; padding: 28px; overflow-y: auto; }
     .tool-header { margin-bottom: 24px; }
     .tool-title  { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
@@ -83,10 +83,10 @@
     .tool-subtitle { font-size: 12px; color: var(--muted); padding-left: 28px; }
     .tool-divider { height: 1px; background: linear-gradient(90deg, rgba(200,169,110,.5), transparent); margin-top: 18px; }
 
-    /* ── Grid ── */
+    /* ââ Grid ââ */
     .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; flex: 1; }
 
-    /* ── Fields ── */
+    /* ââ Fields ââ */
     .fields { display: flex; flex-direction: column; gap: 18px; }
     .field-label { display: block; font-size: 10px; color: var(--gold); letter-spacing: .12em; text-transform: uppercase;
                    font-weight: 500; margin-bottom: 7px; }
@@ -110,7 +110,7 @@
     .spinner { width: 13px; height: 13px; border: 2px solid rgba(0,0,0,.2); border-top-color: #06060e;
                border-radius: 50%; animation: spin 1s linear infinite; }
 
-    /* ── Output ── */
+    /* ââ Output ââ */
     .output-col { display: flex; flex-direction: column; }
     .output-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
     .output-label  { font-size: 10px; color: var(--muted); letter-spacing: .15em; text-transform: uppercase; }
@@ -143,11 +143,11 @@
                   transition: all .18s; }
     .action-btn:hover { border-color: rgba(200,169,110,.35); color: var(--gold); }
 
-    /* ── Footer ── */
+    /* ââ Footer ââ */
     .footer-brand { font-family: 'Cormorant Garamond', serif; font-size: 13px; color: var(--muted); letter-spacing: .1em; }
     .footer-note  { font-size: 9px; color: var(--muted); letter-spacing: .15em; }
 
-    /* ── Responsive ── */
+    /* ââ Responsive ââ */
     @media (max-width: 768px) {
       .body { flex-direction: column; }
       .sidebar { width: 100%; flex-direction: row; flex-wrap: wrap; border-right: none; border-bottom: 1px solid var(--border); padding: 12px; }
@@ -179,7 +179,7 @@
     <button class="key-btn" onclick="saveKey()">Save Key</button>
     <span class="key-status" id="keyStatus" style="display:none"></span>
       <span style="font-size:10px;color:var(--muted)">
-      Free key at <a href="https://console.anthropic.com" target="_blank" style="color:var(--gold)">console.anthropic.com</a> — $5 free credit · Support: <a href="mailto:forge.ai.info@gmail.com" style="color:var(--gold)">forge.ai.info@gmail.com</a>
+      Free key at <a href="https://console.anthropic.com" target="_blank" style="color:var(--gold)">console.anthropic.com</a> â $5 free credit Â· Support: <a href="mailto:forge.ai.info@gmail.com" style="color:var(--gold)">forge.ai.info@gmail.com</a>
     </span>
   </div>
 
@@ -225,7 +225,7 @@
           </div>
           <div class="output-actions" id="outputActions" style="display:none">
             <button class="action-btn" onclick="resetOutput()">Reset</button>
-            <button class="action-btn" onclick="generate()">Regenerate ↺</button>
+            <button class="action-btn" onclick="generate()">Regenerate âº</button>
           </div>
         </div>
       </div>
@@ -233,22 +233,22 @@
   </div>
 
   <footer class="footer">
-    <span class="footer-brand">FORGE © 2026</span>
+    <span class="footer-brand">FORGE Â© 2026</span>
     <span style="font-size:10px;color:var(--muted)">
       <a href="https://swampfox178.gumroad.com/l/hsiilu" target="_blank" style="color:var(--gold);text-decoration:none;">AI Prompt Bible $9</a>
-      <span style="color:var(--muted);margin:0 6px">·</span>
+      <span style="color:var(--muted);margin:0 6px">Â·</span>
       <a href="https://swampfox178.gumroad.com/l/xivti" target="_blank" style="color:var(--gold);text-decoration:none;">Launch Kit $47</a>
-      <span style="color:var(--muted);margin:0 6px">·</span>
-      <a href="https://swampfox178.gumroad.com" target="_blank" style="color:var(--soft);text-decoration:none;">All Products →</a>
+      <span style="color:var(--muted);margin:0 6px">Â·</span>
+      <a href="https://swampfox178.gumroad.com" target="_blank" style="color:var(--soft);text-decoration:none;">All Products â</a>
     </span>
-    <span class="footer-note">5 TOOLS · UNLIMITED USE</span>
+    <span class="footer-note">5 TOOLS Â· UNLIMITED USE</span>
   </footer>
 </div>
 
 <script>
   const TOOLS = [
     {
-      id: 'pitch', icon: '⚡', name: 'Elevator Pitch', tagline: 'Hook anyone in 60 seconds',
+      id: 'pitch', icon: 'â¡', name: 'Elevator Pitch', tagline: 'Hook anyone in 60 seconds',
       fields: [
         { key: 'business',       label: 'What does your business do?',  placeholder: 'e.g. Online coaching for first-time managers...' },
         { key: 'customer',       label: 'Who is your ideal customer?',  placeholder: 'e.g. New managers at tech companies...' },
@@ -258,7 +258,7 @@
       prompt: f => `Create a powerful 60-second elevator pitch. Conversational, no buzzwords, memorable hook at the end.\n\nBusiness: ${f.business}\nIdeal customer: ${f.customer}\nKey differentiator: ${f.differentiator}\n\nWrite only the pitch. 3-4 sentences. First person voice.`
     },
     {
-      id: 'email', icon: '✉', name: 'Cold Email', tagline: 'Emails that get real replies',
+      id: 'email', icon: 'â', name: 'Cold Email', tagline: 'Emails that get real replies',
       fields: [
         { key: 'offer',     label: 'What do you offer?',     placeholder: 'e.g. Web design services for local restaurants...' },
         { key: 'prospect',  label: 'Who are you emailing?',  placeholder: 'e.g. Restaurant owners in my city...' },
@@ -268,7 +268,7 @@
       prompt: f => `Write a cold email that gets a genuine reply. Under 120 words. Human, specific, zero fluff. One CTA.\n\nOffer: ${f.offer}\nProspect: ${f.prospect}\nAsk: ${f.ask}\n\nEmail body only. Do not start with "I".`
     },
     {
-      id: 'bio', icon: '◈', name: 'Social Media Bio', tagline: 'Turn visitors into followers',
+      id: 'bio', icon: 'â', name: 'Social Media Bio', tagline: 'Turn visitors into followers',
       fields: [
         { key: 'name',     label: 'Your name or brand',  placeholder: 'e.g. Marcus Reid / Bold Theory...' },
         { key: 'what',     label: 'What do you do?',     placeholder: 'e.g. I help coaches turn expertise into income...' },
@@ -278,7 +278,7 @@
       prompt: f => `Write 3 distinct bio options for ${f.platform}. Each punchy, ends with a CTA.\n\nName: ${f.name}\nWhat they do: ${f.what}\n\nFormat:\nOption 1:\n[bio]\n\nOption 2:\n[bio]\n\nOption 3:\n[bio]`
     },
     {
-      id: 'product', icon: '◉', name: 'Product Description', tagline: 'Copy that converts buyers',
+      id: 'product', icon: 'â', name: 'Product Description', tagline: 'Copy that converts buyers',
       fields: [
         { key: 'product',  label: 'What are you selling?',         placeholder: 'e.g. A 6-week online fitness course...' },
         { key: 'benefits', label: 'Top 3 outcomes for the buyer',  placeholder: 'e.g. Lose weight, more energy, no gym needed...' },
@@ -288,7 +288,7 @@
       prompt: f => `Write a compelling product description. Punchy headline, 2 outcome-focused paragraphs, closing CTA.\n\nProduct: ${f.product}\nOutcomes: ${f.benefits}\nBuyer: ${f.audience}\n\nHeadline on first line, then description.`
     },
     {
-      id: 'content', icon: '✦', name: 'Content Ideas', tagline: '30 days of ideas in 30 seconds',
+      id: 'content', icon: 'â¦', name: 'Content Ideas', tagline: '30 days of ideas in 30 seconds',
       fields: [
         { key: 'niche',    label: 'Your niche or topic',   placeholder: 'e.g. Personal finance for millennials...' },
         { key: 'platform', label: 'Platform and format',   placeholder: 'e.g. LinkedIn posts, Instagram Reels...' },
@@ -315,7 +315,7 @@
       return;
     }
     apiKey = val;
-    statusEl.textContent = '✓ Key saved';
+    statusEl.textContent = 'â Key saved';
     statusEl.className = 'key-status ok';
     statusEl.style.display = 'inline';
   }
@@ -357,7 +357,7 @@
     btn.className = 'gen-btn';
     btn.id = 'genBtn';
     btn.onclick = generate;
-    btn.textContent = 'Generate →';
+    btn.textContent = 'Generate â';
     container.appendChild(btn);
 
     resetOutput();
@@ -400,7 +400,7 @@
     const fields = getFields();
     const missing = activeTool.fields.filter(f => !fields[f.key]);
     if (missing.length) {
-      showError('Please fill in: ' + missing.map(f => f.label).join(' · '));
+      showError('Please fill in: ' + missing.map(f => f.label).join(' Â· '));
       return;
     }
 
@@ -452,7 +452,7 @@
         </div>`;
     } else {
       btn.disabled = false;
-      btn.textContent = 'Generate →';
+      btn.textContent = 'Generate â';
     }
   }
 
@@ -474,7 +474,7 @@
     if (!currentOutput) return;
     navigator.clipboard.writeText(currentOutput).then(() => {
       const btn = document.getElementById('copyBtn');
-      btn.textContent = '✓ Copied';
+      btn.textContent = 'â Copied';
       setTimeout(() => btn.textContent = 'Copy', 2000);
     });
   }
@@ -495,7 +495,7 @@
         box-shadow:0 8px 40px rgba(0,0,0,.6);animation:fadeUp .4s ease;">
         <button onclick="document.getElementById('upgradeBanner').remove()"
           style="position:absolute;top:10px;right:12px;background:none;border:none;
-                 color:#9a94b8;font-size:18px;cursor:pointer;line-height:1;">×</button>
+                 color:#9a94b8;font-size:18px;cursor:pointer;line-height:1;">Ã</button>
         <div style="font-size:10px;color:#c8a96e;letter-spacing:.15em;
                     text-transform:uppercase;margin-bottom:8px;">FORGE Complete Bundle</div>
         <div style="font-size:13px;font-weight:700;color:#f5f2ff;
@@ -511,7 +511,7 @@
                  letter-spacing:.06em;text-decoration:none;text-transform:uppercase;margin-bottom:8px;"
           onmouseover="this.style.background='#e8c878'"
           onmouseout="this.style.background='#c8a96e'">
-          Get the Bundle — $54 →
+          Get the Bundle â $54 â
         </a>
         <div style="display:flex;gap:6px;">
           <a href="https://swampfox178.gumroad.com/l/hsiilu" target="_blank"
