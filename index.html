@@ -10,14 +10,14 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg:       #06060e;
-      --surface:  #0d0d1c;
-      --border:   #1a1a2e;
+      --bg:       #0f1022;
+      --surface:  #181830;
+      --border:   #2e2e50;
       --gold:     #c8a96e;
       --gold-b:   #e8c878;
-      --text:     #f0ebe3;
-      --muted:    #4a4a6a;
-      --soft:     #8a84a0;
+      --text:     #f5f2ff;
+      --muted:    #9a94b8;
+      --soft:     #c0bcd0;
       --green:    #4ade80;
       --red:      #f87171;
     }
@@ -25,7 +25,7 @@
     html, body { height: 100%; background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-size: 14px; }
 
     ::-webkit-scrollbar { width: 4px; }
-    ::-webkit-scrollbar-thumb { background: #2a2a4a; border-radius: 2px; }
+    ::-webkit-scrollbar-thumb { background: #3a3a60; border-radius: 2px; }
 
     @keyframes spin    { to { transform: rotate(360deg); } }
     @keyframes fadeUp  { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
@@ -34,7 +34,7 @@
     /* ── Layout ── */
     .app    { display: flex; flex-direction: column; min-height: 100vh; }
     .header { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; justify-content: space-between;
-              padding: 14px 28px; border-bottom: 1px solid var(--border); background: rgba(13,13,28,.92); backdrop-filter: blur(12px); }
+              padding: 14px 28px; border-bottom: 1px solid var(--border); background: rgba(24,24,48,.95); backdrop-filter: blur(12px); }
     .body   { display: flex; flex: 1; overflow: hidden; }
     .footer { border-top: 1px solid var(--border); padding: 10px 28px; display: flex; justify-content: space-between; align-items: center; }
 
@@ -129,8 +129,7 @@
     .output-loading { position: absolute; inset: 0; display: flex; flex-direction: column;
                       align-items: center; justify-content: center; gap: 14px; }
     .output-loading .big-spinner { width: 28px; height: 28px; border: 2px solid var(--border); border-top-color: var(--gold);
-                                   border-radius: 50%; animation: spin 1s linear infinite; }
-    .loading-text { font-size: 11px; letter-spacing: .1em;
+                                   border-radius: 50%; animation: spin 1s linear infinite; }    .loading-text { font-size: 11px; letter-spacing: .1em;
                     background: linear-gradient(90deg,#5a5a7a 0%,var(--gold) 40%,var(--gold-b) 50%,var(--gold) 60%,#5a5a7a 100%);
                     background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent;
                     animation: shimmer 2s linear infinite; }
