@@ -235,8 +235,11 @@
   <footer class="footer">
     <span class="footer-brand">FORGE © 2026</span>
     <span style="font-size:10px;color:var(--muted)">
-      Also available: <a href="https://swampfox178.gumroad.com/l/hsiilu" target="_blank"
-      style="color:var(--gold);text-decoration:none;">AI Prompt Bible — 50 prompts for $9 →</a>
+      <a href="https://swampfox178.gumroad.com/l/hsiilu" target="_blank" style="color:var(--gold);text-decoration:none;">AI Prompt Bible $9</a>
+      <span style="color:var(--muted);margin:0 6px">·</span>
+      <a href="https://swampfox178.gumroad.com/l/xivti" target="_blank" style="color:var(--gold);text-decoration:none;">Launch Kit $47</a>
+      <span style="color:var(--muted);margin:0 6px">·</span>
+      <a href="https://swampfox178.gumroad.com" target="_blank" style="color:var(--soft);text-decoration:none;">All Products →</a>
     </span>
     <span class="footer-note">5 TOOLS · UNLIMITED USE</span>
   </footer>
@@ -486,31 +489,51 @@
     banner.id = 'upgradeBanner';
     banner.innerHTML = `
       <div style="
-        position:fixed; bottom:24px; right:24px; z-index:100;
-        background:#181830; border:1px solid #c8a96e;
-        border-radius:12px; padding:18px 20px; max-width:300px;
-        box-shadow:0 8px 40px rgba(0,0,0,.6); animation:fadeUp .4s ease;">
+        position:fixed;bottom:24px;right:24px;z-index:100;
+        background:#181830;border:1px solid #c8a96e;
+        border-radius:12px;padding:18px 20px;max-width:300px;
+        box-shadow:0 8px 40px rgba(0,0,0,.6);animation:fadeUp .4s ease;">
         <button onclick="document.getElementById('upgradeBanner').remove()"
           style="position:absolute;top:10px;right:12px;background:none;border:none;
-                 color:#9a94b8;font-size:16px;cursor:pointer;line-height:1;">×</button>
+                 color:#9a94b8;font-size:18px;cursor:pointer;line-height:1;">×</button>
         <div style="font-size:10px;color:#c8a96e;letter-spacing:.15em;
-                    text-transform:uppercase;margin-bottom:8px;">FORGE Pro Bundle</div>
-        <div style="font-size:14px;font-weight:600;color:#f5f2ff;
-                    line-height:1.4;margin-bottom:6px;">
-          Enjoying FORGE?
+                    text-transform:uppercase;margin-bottom:10px;">More From FORGE</div>
+        <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:14px;">
+          <a href="https://swampfox178.gumroad.com/l/hsiilu" target="_blank"
+            style="display:flex;justify-content:space-between;align-items:center;
+                   padding:9px 12px;background:#0f1022;border:1px solid #2e2e50;
+                   border-radius:7px;text-decoration:none;transition:border-color .2s;"
+            onmouseover="this.style.borderColor='#c8a96e'"
+            onmouseout="this.style.borderColor='#2e2e50'">
+            <span style="font-size:11px;color:#f5f2ff;">AI Prompt Bible</span>
+            <span style="font-size:11px;color:#c8a96e;font-weight:700;">$9</span>
+          </a>
+          <a href="https://swampfox178.gumroad.com/l/piyqe" target="_blank"
+            style="display:flex;justify-content:space-between;align-items:center;
+                   padding:9px 12px;background:#0f1022;border:1px solid #2e2e50;
+                   border-radius:7px;text-decoration:none;transition:border-color .2s;"
+            onmouseover="this.style.borderColor='#c8a96e'"
+            onmouseout="this.style.borderColor='#2e2e50'">
+            <span style="font-size:11px;color:#f5f2ff;">FORGE Toolkit</span>
+            <span style="font-size:11px;color:#c8a96e;font-weight:700;">$27</span>
+          </a>
+          <a href="https://swampfox178.gumroad.com/l/xivti" target="_blank"
+            style="display:flex;justify-content:space-between;align-items:center;
+                   padding:9px 12px;background:#0f1022;border:1px solid #2e2e50;
+                   border-radius:7px;text-decoration:none;transition:border-color .2s;"
+            onmouseover="this.style.borderColor='#c8a96e'"
+            onmouseout="this.style.borderColor='#2e2e50'">
+            <span style="font-size:11px;color:#f5f2ff;">Solopreneur Launch Kit</span>
+            <span style="font-size:11px;color:#c8a96e;font-weight:700;">$47</span>
+          </a>
         </div>
-        <div style="font-size:12px;color:#c0bcd0;line-height:1.6;margin-bottom:14px;">
-          Get the full bundle — setup guide, tips, and future tools included.
-          One-time payment. No subscription.
-        </div>
-        <a href="https://swampfox178.gumroad.com/l/piyqe" target="_blank"
-          style="display:block;text-align:center;padding:10px;background:#c8a96e;
-                 border-radius:7px;color:#0f1022;font-size:12px;font-weight:700;
-                 letter-spacing:.06em;text-decoration:none;text-transform:uppercase;
-                 transition:background .2s;"
+        <a href="https://swampfox178.gumroad.com" target="_blank"
+          style="display:block;text-align:center;padding:9px;background:#c8a96e;
+                 border-radius:7px;color:#0f1022;font-size:11px;font-weight:700;
+                 letter-spacing:.06em;text-decoration:none;text-transform:uppercase;"
           onmouseover="this.style.background='#e8c878'"
           onmouseout="this.style.background='#c8a96e'">
-          Get Full Bundle — $27 →
+          View All Products →
         </a>
       </div>`;
     document.body.appendChild(banner);
